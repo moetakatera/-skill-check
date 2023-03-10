@@ -1,0 +1,330 @@
+/* ----------
+	common
+---------- */
+body {
+	background: #fafafa;
+	color: #333;
+	font-family: 'しっぽり明朝', serif;
+	font-size: 16px;
+}
+
+.container {
+	overflow-x: hidden;
+	width: 100%;
+}
+
+section {
+	padding: 60px 0;
+}
+@media (max-width: 767px) {
+	section {
+		padding: 100px 0 60px;
+	}
+}
+
+.tit {
+	text-align: center;
+}
+
+.b {
+	font-weight: bold;
+}
+.big {
+	font-size: 20px;
+}
+.small {
+	font-size: 14px;
+}
+
+section .tit h1 {
+	display: inline-block;
+	position: relative;
+	font-size: 28px;
+}
+
+section .tit h1:before {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	display: inline-block;
+	width: 60px;
+	height: 2px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #efbc68;
+	border-radius: 2px;
+}
+
+.sp-br {
+	display: none;
+}
+@media (max-width: 767px) {
+	.sp-br {
+		display: block;
+	}
+}
+
+@media (max-width: 767px) {
+	.pc-br {
+		display: none;
+	}
+}
+
+select,
+input,
+button {
+	font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.alert {
+	color: red;
+	padding-top: 10px;
+}
+
+.alert-danger {
+	color: red;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.alert-all {
+	color: red;
+	padding-left: 20px;
+} 
+
+.flash_message {
+	padding: 14px;
+	margin-bottom: 20px;
+	text-align: center;
+	background-color: #efbc68;
+}
+
+/* ----------
+	header
+---------- */
+
+#site-header {
+	display: flex;
+	justify-content: space-between;
+	padding: 24px;
+	width: 100%;
+	font-size: 14px;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+#site-header .brand {
+	font-family: 'Kaisei Opti', serif;
+}
+
+#site-header .brand a {
+	text-decoration: none;
+	color: #333;
+	font-size: 30px;
+}
+
+#site-header li a:hover {
+	color: #efbc68;
+}
+
+#site-header ul {
+	display: flex;
+	height: 100%;
+	margin: 0;
+}
+
+#site-header li a {
+	align-items: center;
+	color: #222;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	padding: 0 24px;
+	text-decoration: none;
+}
+
+#site-header nav form {
+	height: 100%;
+}
+/* ----------
+	footer
+---------- */
+#site-footer .copyright {
+	font-size: 12px;
+	text-align: center;
+}
+
+/* ----------
+	index
+---------- */
+.index p {
+	margin: 50px auto;
+	line-height: 2;
+}
+
+.index section {
+	padding: 30px 0;
+}
+@media (max-width: 767px) {
+	.index section {
+		padding: 0;
+	}
+}
+
+.index .kv {
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.index .kv img {
+	height: 550px;
+	object-fit: cover;
+}
+
+
+/* ----------
+	diaries
+---------- */
+.diaries .diaries {
+	padding-top: 60px;
+}
+
+.diaries .diaries img {
+	width: 250px;
+	height: 160px;
+	object-fit: cover;
+}
+
+.diaries .diaries .img {
+	margin-right: 14px;
+}
+
+.diaries .diaries .msg {
+	width: 250px;
+	height: 160px;
+	margin-right: 14px;
+}
+
+.diaries .date,
+.diaries .btn {
+	display: inline-block;
+}
+
+.diaries .btn {
+	padding: 5px;
+}
+
+.diaries .btn a {
+	color: #D99555;
+}
+
+.diaries .diary {
+	display: flex;
+	align-items: center;
+	width: 800px;
+	margin: 0 auto 50px;
+    text-align: left;
+}
+
+.diaries .pagination {
+	display: flex;
+  	align-items: center;
+	justify-content: center;
+}
+
+.diaries .page-item {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	overflow: hidden;
+	background: #fff;
+	border: solid 1px #333;
+	font-size: 14px;
+	color: #333;
+	font-weight: bold;
+	transition: all 0.15s linear;
+}
+
+.diaries .page-item a {
+	text-decoration: none;
+	color: #333;
+}
+
+.diaries .page-item.active {
+	background: #333;
+	color: #fff;
+	pointer-events: none;
+}
+
+.diaries .page-item:not(.active):hover {
+	background: #333;
+	cursor: pointer;
+}
+
+.diaries .page-item:not(.active):hover .page-link {
+    color: #fff;
+}
+
+/* ----------
+	post
+	edit
+---------- */
+.post form,
+.edit form {
+	text-align: center;
+	margin: 60px;
+}
+
+.post .form-item,
+.edit .form-item {
+	margin-bottom: 30px;
+}
+
+.post input,
+.edit input {
+    height: 50px;
+	margin-top: 10px;
+}
+
+.post input#diary,
+.edit input#diary {
+	width: 80%;
+}
+
+.post input#title,
+.edit input#title {
+	width: 35%;
+}
+
+.post label,
+.edit label {
+	display: block;
+}
+
+.post button,
+.edit button {
+	background-color: #efbc68;
+	border: none;
+	width: 150px;
+    height: 48px;
+}
+
+.post button:hover,
+.edit button:hover {
+	border: 1px solid #333;
+	background-color: #fafafa;
+}
+
+.edit img {
+	width: 250px;
+	height: 160px;
+	object-fit: cover;
+	margin-top: 10px;
+}
